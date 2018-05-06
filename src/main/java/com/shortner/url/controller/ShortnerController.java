@@ -21,19 +21,19 @@ public class ShortnerController {
 		this.urlService = urlService;
 	}
 
-	@GetMapping("shorten")
+	@GetMapping("/shorten")
 	public Link getShortenUrl(@RequestParam("url") String url) {
 		return urlService.shorten(url);
 	}
 
-	@GetMapping("expand")
+	@GetMapping("/expand")
 	public Link getExpandUrl(@RequestParam("url") String url) {
 		return urlService.expand(url);
 	}
 
 	@ExceptionHandler
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	private void UrlNotFoundExcepion(URLNotFoundException ex) {
+	private String UrlNotFoundExcepion(URLNotFoundException ex) {
+		return "URL you are seraching for is not available";
 	}
-
 }

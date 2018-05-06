@@ -1,11 +1,18 @@
 package com.shortner.url.model;
 
-import java.util.function.IntPredicate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
 public class Link {
 
+	public Link() {
+	}
+
+	@Id
 	@JsonProperty("shortUrl")
 	private String shortUrl;
 

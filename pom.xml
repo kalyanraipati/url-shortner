@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shortner.url</groupId>
-	<artifactId>url-shrotner</artifactId>
+	<artifactId>url-shortner</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>url-shrotner</name>
+	<name>url-shortner</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -22,17 +22,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
 	</properties>
 
 	<dependencies>
-<!-- 		<dependency> -->
-<!-- 		<groupId>org.springframework.boot</groupId> -->
-<!-- 		<artifactId>spring-boot-starter-amqp</artifactId> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-cache</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-amqp</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-cache</artifactId> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>

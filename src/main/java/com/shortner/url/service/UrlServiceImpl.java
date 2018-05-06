@@ -5,8 +5,10 @@ import java.nio.charset.StandardCharsets;
 import org.springframework.stereotype.Service;
 
 import com.google.common.hash.Hashing;
+import com.shortner.url.controller.URLNotFoundException;
 import com.shortner.url.model.Link;
 import com.shortner.url.repository.LinkRepository;
+import com.shortner.url.repository.LinkRepositoryTest;
 
 @Service
 public class UrlServiceImpl implements UrlService {
@@ -30,8 +32,10 @@ public class UrlServiceImpl implements UrlService {
 	}
 
 	@Override
-	public Link expand(String shortUrl) {
+	public Link expand(String shortUrl) throws URLNotFoundException {
 		Link link = linkRepository.findByShortUrl(shortUrl);
+		if(link==null)
+			throw new URLNotFoundException();
 		return link;
 	}
 
